@@ -1,4 +1,5 @@
 // 1.1.0
+// Copyright (C) RedMikePumpkin/1e1001 2020
 (()=>{
   var a=(n,p,m)=>{
     if(!m)m=0;
