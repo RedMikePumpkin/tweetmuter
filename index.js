@@ -1,4 +1,4 @@
-// 1.1.1
+// 1.1.2
 // Copyright (C) RedMikePumpkin/1e1001 2020
 (()=>{
   var a=(n,p,m)=>{
@@ -10,15 +10,15 @@
       return null
     }
     return n
-  };
-  Array.from(document.querySelectorAll('div[data-testid="primaryColumn"] .css-901oao')).filter(i=>i.innerHTML==='Promoted').forEach((b)=>{
+  },q=Array.from(document.querySelectorAll('div[data-testid="primaryColumn"] .css-901oao')).filter(i=>i.innerHTML==='Promoted');
+  q.forEach((b)=>{
     if(b){
       var c=a(b,10,0),d=a(b,4,5);
       if(d)d=d.href;
       if(!d||!c)return;
       var e=window.open(d,"_blank","width=500,height=500");
       c.remove();
-      e.onload=()=>{
+      setTimeout(()=>{
         var z=e.document.querySelector('div[role="button"][aria-expanded="false"][aria-label="More"]');
         if(!z)return;
         z.click();
@@ -28,7 +28,7 @@
         setTimeout(()=>{
           e.close()
         },200)
-      }
+      },5000*q.length);
     }
   })
 })()
