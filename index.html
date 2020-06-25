@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TweetMuter</title>
+  </head>
+  <body>
+    <p>sorry for the bad website lol</p>
+    <h1>TweetMuter</h1>
+    <p>To have you're very own TweetMuter, simply bookmark this link: <a href='#' id='url'>TweetMuter</a> (<span id='version'>Loading TweetMuter...</span>)</p>
+    <script>
+      fetch(new Request('./index.min.js'))
+        .then(response => response.text())
+        .then(text => {
+          var lines = text.split('\n');
+          document.getElementById('url').href = 'javascript:' + lines.slice(2).join('\n');
+          document.getElementById('version').innerText = 'TweetMuter' + lines[0].slice(2);
+        })
+        .catch(console.error);
+    </script>
+  </body>
+</html>
