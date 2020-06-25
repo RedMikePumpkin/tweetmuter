@@ -1,2 +1,2 @@
 # tweetmuter
-automatically mutes accounts that promote their tweets
+semi-automatically mutes accounts that promote their tweets
