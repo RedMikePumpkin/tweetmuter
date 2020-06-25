@@ -1,4 +1,4 @@
-// 1.1.0
+// 1.1.1
 // Copyright (C) RedMikePumpkin/1e1001 2020
 (()=>{
   var a=(n,p,m)=>{
@@ -18,7 +18,7 @@
       if(!d||!c)return;
       var e=window.open(d,"_blank","width=500,height=500");
       c.remove();
-      setTimeout(()=>{
+      e.onload=()=>{
         var z=e.document.querySelector('div[role="button"][aria-expanded="false"][aria-label="More"]');
         if(!z)return;
         z.click();
@@ -28,7 +28,7 @@
         setTimeout(()=>{
           e.close()
         },200)
-      },5000)
+      }
     }
   })
 })()
